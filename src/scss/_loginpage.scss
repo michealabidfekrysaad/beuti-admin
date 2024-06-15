@@ -1,0 +1,255 @@
+.locale-toggle {
+  margin-top: 1em;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#login-page {
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+  .logo-local-position {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 9em;
+    .img-login {
+      margin: 1px 31px;
+    }
+  }
+  .image-login-div {
+    height: 100%;
+  }
+  .error-message {
+    color: $darkerrorLogin;
+  }
+  .download-icon {
+    min-height: 9em;
+    background-color: rgba(255, 255, 255, 0.75);
+    position: relative;
+    top: -180px;
+    width: 80%;
+    margin: auto;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    & > .label {
+      color: #787878;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .download-icon {
+      min-height: 7em;
+      width: 100%;
+      top: -220px;
+    }
+    .downloadstores {
+      &-body {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        &__item {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+body {
+  height: 1vh;
+}
+
+.m0-p0 {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.login-image {
+  opacity: 0.8;
+}
+.donthaveaccount {
+  font-weight: 600;
+  font-size: 18px;
+  &:hover {
+    text-decoration: underline;
+  }
+  button {
+    color: #000;
+    border: none;
+    background: none;
+  }
+  span {
+    color: $primary;
+  }
+}
+.forgetpassword {
+  height: 679px;
+  // display: flex;
+  // justify-content: center;
+  padding-top: 90px;
+  // align-items: flex-start;
+  &__header {
+    font-weight: 600;
+    color: #787878;
+  }
+  &__subtitle {
+    margin-bottom: 25px;
+    color: #787878;
+  }
+  &__verifycode {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+.registermodal-wrapper {
+  .modal-dialog {
+    max-width: 800px;
+    .modal-content {
+      border: none;
+      border-radius: 15px;
+    }
+  }
+}
+.registermodal {
+  padding: 70px 65px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-title {
+    color: $primary;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &-subtitle {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  &-list {
+    display: flex;
+
+    &__item {
+      cursor: pointer;
+      margin-bottom: 20px;
+      width: 160px;
+      text-align: center;
+      overflow: hidden;
+      padding-top: 10px;
+      opacity: 0.7;
+      transition: 0.3s all;
+      &-image {
+        width: 160px;
+        height: 90px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        transition: 0.3s all;
+      }
+      &-name {
+        margin: 0 auto;
+        width: 160px;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bold;
+        text-overflow: ellipsis;
+      }
+      &:hover,
+      &.active {
+        opacity: 1;
+
+        .registermodal-list__item-image {
+          box-shadow: 0px 0px 0px 3px #a82f96;
+        }
+        .registermodal-list__item-name {
+          color: #a82f96;
+        }
+      }
+    }
+  }
+  &-description {
+    background: rgba(151, 151, 151, 0.06);
+    width: 100%;
+    text-align: center;
+    padding: 20px 30px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 40px;
+  }
+  &-submit {
+    margin-top: 40px;
+  }
+}
+
+.paste-clipboard {
+  position: relative;
+  &-input {
+    padding-right: 63px !important;
+    padding-left: 13px !important;
+  }
+  &-button {
+    position: absolute;
+    bottom: 2px;
+    right: 24px;
+    border: none;
+    background: #fff;
+    width: 63px;
+    height: 43px;
+    color: #a82f96;
+    font-weight: bold;
+  }
+}
+
+body[dir='rtl'] {
+  .paste-clipboard {
+    &-input {
+      padding-left: 63px !important;
+      padding-right: 13px !important;
+    }
+    &-button {
+      right: auto;
+      left: 24px;
+    }
+  }
+}
+
+.downloadstores {
+  &-body {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+      background: linear-gradient(180deg, #a82f96 0%, #9d4585 100%);
+      border: 0.1px solid #787878;
+      border-radius: 8px;
+      width: 48%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 9px;
+      gap: 3px;
+      cursor: pointer;
+      &-text {
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &--download {
+          font-weight: 400;
+          font-size: 14px;
+          margin: 0px !important;
+        }
+        &--name {
+          font-weight: bold;
+          font-size: 19px;
+          margin: 0px !important;
+          text-align: start;
+        }
+      }
+    }
+  }
+}

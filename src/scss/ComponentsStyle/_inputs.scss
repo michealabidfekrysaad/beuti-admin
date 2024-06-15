@@ -1,0 +1,204 @@
+@import './../variables';
+body[dir='rtl'] {
+  .MuiAutocomplete-hasPopupIcon .MuiAutocomplete-inputRoot,
+  .MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot {
+    padding-right: 15px !important;
+    padding-left: 30px !important;
+  }
+  .MuiAutocomplete-endAdornment {
+    left: 9px;
+    right: auto !important;
+  }
+}
+.beuti-form {
+  &__label {
+    margin-bottom: 3px;
+    color: #787878;
+  }
+  .MuiOutlinedInput-input {
+    padding: 14px;
+  }
+  .MuiOutlinedInput-notchedOutline {
+    box-shadow: 0px 2px 0px 0px $primary, inset 0px 0px 0px 1px $darkPrimary;
+    border-radius: 3px;
+    border: 0;
+  }
+  .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+    box-shadow: 0px 2px 0px 0px $error, inset 0px 0px 0px 1px $darkerror;
+  }
+  .MuiSelect-outlined.MuiSelect-outlined {
+    padding-right: 14px !important;
+    padding-left: 14px !important;
+  }
+}
+
+.input-box {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding-bottom: 20px;
+  &__controllers {
+    border-radius: 6px;
+    padding: 12px 5px;
+    // margin: 0 10px;
+    &--header {
+      font-weight: bold;
+      padding-bottom: 2rem;
+      margin-bottom: 0px;
+    }
+    &__label {
+      font-weight: 500;
+      font-size: 14px;
+      color: rgba(120, 120, 120, 1);
+      padding: 0px 5px;
+    }
+    &--below-header {
+      color: #989dc8;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &-input {
+      width: 100%;
+      border-radius: 5px;
+      min-height: 51px;
+      border: 1px solid #eee;
+      padding: 12px 15px;
+      &--error {
+        box-shadow: 0px 2px 0px $darkerrorLogin;
+        border-color: $darkerrorLogin;
+      }
+      &:focus {
+        box-shadow: 0px 2px 0px $primary;
+        border-color: $primary;
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+    &-select {
+      display: block;
+      font-family: 'Cairo' !important;
+      width: 100%;
+      font-size: 15px;
+      border-radius: 5px;
+      border: 1px solid #eee;
+      padding: 10px 15px;
+      background-color: white;
+
+      &:focus {
+        box-shadow: 0px 2px 0px $primary;
+        border-color: $primary;
+        outline: none;
+      }
+      &__pre-choosen {
+        color: #787878;
+      }
+      &__options {
+        color: black;
+      }
+    }
+    &-textarea {
+      display: block;
+      //   resize: none;
+      font-family: 'Cairo' !important;
+      font-size: 15px;
+      border-radius: 5px;
+      border: 1px solid #eee;
+      min-height: 90px;
+      padding: 12px 15px;
+      background-color: white;
+      max-height: 150px;
+      resize: none;
+
+      &:focus {
+        box-shadow: 0px 2px 0px $primary;
+        border-color: $primary;
+        outline: none;
+      }
+      &--error {
+        box-shadow: 0px 2px 0px $darkerrorLogin;
+        border-color: $darkerrorLogin;
+      }
+    }
+  }
+}
+.beuti {
+  &-search {
+    width: 100%;
+    position: relative;
+    &__submit {
+      right: auto;
+      left: 0;
+      &:hover {
+        background-color: $primary;
+        color: #fff;
+        transition: all 0.4s;
+        border-radius: 6px 0px 0px 6px;
+      }
+    }
+    &__clear {
+      right: 0;
+      left: auto;
+      transition: all 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &__submit,
+    &__clear {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      width: 40px !important;
+      background: inherit;
+      border: none;
+      color: #a1a1a1;
+      i {
+        font-size: 20px;
+      }
+
+      &:disabled {
+        background: inherit;
+        border: none;
+        color: #a1a1a1;
+      }
+    }
+
+    &__input {
+      height: 45px;
+      width: 100%;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-right: 10px;
+      padding-left: 45px;
+      border: 1px solid rgba(210, 213, 225, 1);
+      border-radius: 6px;
+      &:focus {
+        outline: none;
+        box-shadow: 0px 4px 5px 0px #a82f962e;
+      }
+    }
+  }
+}
+body[dir='rtl'] {
+  .beuti {
+    &-search {
+      &__submit {
+        right: 0;
+        left: auto;
+        &:hover {
+          border-radius: 0px 6px 6px 0px;
+        }
+      }
+      &__clear {
+        right: auto;
+        left: 0;
+      }
+      &__input {
+        padding-left: 10px;
+        padding-right: 45px;
+      }
+    }
+  }
+}

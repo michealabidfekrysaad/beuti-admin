@@ -1,0 +1,142 @@
+div.card-body.home-page-alert {
+  margin-top: 20px;
+  h3.title-information {
+    display: inline;
+    margin: 0px 20px;
+  }
+  p.hint-information {
+    margin: 3px 60px;
+  }
+  .info-card {
+    padding: 10px 4px;
+    margin: 10px 0px;
+    &__img {
+      margin-bottom: 25px;
+    }
+    &__header {
+      margin-bottom: 25px;
+      padding: 0px;
+      min-height: 43px;
+      &-label {
+        font-weight: 600;
+        font-size: 15px;
+        color: #787878;
+      }
+    }
+    &__hint {
+      margin-bottom: 35px;
+      padding: 0px 10px;
+      min-height: 75px;
+      &-label {
+        font-weight: 500;
+        font-size: 13px;
+        padding: 0px 1.5px;
+        color: #787878;
+      }
+    }
+    &__btn {
+      margin-bottom: 10px;
+      padding: 0px 10px;
+    }
+  }
+}
+div.card-body.home-page-graph {
+  margin-top: 50px;
+  .summary-info {
+    display: flex;
+    padding: 3px 25px;
+    &__header {
+      color: $primary;
+      font-weight: 500;
+      font-size: 20px;
+      font-family: Somar;
+      width: 50%;
+    }
+    &__month {
+      color: #787878;
+      font-family: Somar;
+      font-weight: 500;
+      font-size: 17px;
+      width: 50%;
+      text-align: center;
+    }
+  }
+  .summary-details {
+    text-align: center;
+    &__block {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &-information {
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 2px solid black;
+      }
+      &-statics {
+        padding-top: 10px;
+        min-width: 60px;
+      }
+    }
+    &__link {
+      color: #989dc8;
+    }
+  }
+  h2.try-again {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+div.home-page-booking {
+  margin-top: 50px;
+  a.action-btns {
+    text-decoration: underline;
+    color: #989dc8 !important;
+    padding: 3px 5px;
+    &:hover {
+      color: black !important;
+    }
+  }
+  p.header-booking {
+    font-size: 15px;
+    color: #a82f96;
+    padding: 0px 20px;
+    margin: 20px 0px;
+    font-weight: 600;
+    display: inline-block;
+  }
+}
+
+div.home-page-top-emp {
+  margin-top: 50px;
+  //   .beuti-table {
+  //     .card {
+  //       &-body {
+  //         .MuiTableCell-head:first-child {
+  //           color: rgba(168, 47, 150, 1) !important;
+  //         }
+  //         .MuiTableCell-head {
+  //           color: black !important;
+  //         }
+  //       }
+  //     }
+  //   }
+}
+div.home-page-top-sales {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  //   .beuti-table {
+  //     .card {
+  //       &-body {
+  //         .MuiTableCell-head:first-child {
+  //           color: rgba(168, 47, 150, 1) !important;
+  //         }
+  //         .MuiTableCell-head {
+  //           color: black !important;
+  //         }
+  //       }
+  //     }
+  //   }
+}

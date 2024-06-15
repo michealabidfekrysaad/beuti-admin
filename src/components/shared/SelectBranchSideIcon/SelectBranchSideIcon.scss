@@ -1,0 +1,74 @@
+.selectbranchside {
+  position: fixed;
+  z-index: 99999;
+  display: grid;
+  transition: all 0.3s;
+  top: 100px;
+  color: #fff;
+  grid-template-areas:
+    'branchicon branchlist '
+    '... branchlist';
+  &-title {
+    height: 28px;
+    line-height: 28px;
+    padding: 0px 4px;
+  }
+  &_list {
+    grid-area: branchlist;
+    background-color: #a82f96;
+    margin-bottom: 0px;
+    padding: 5px;
+    border-radius: 0px 0px 0px 5px;
+    width: 150px;
+    list-style: none;
+    &-item {
+      .MuiFormControlLabel-label {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 107px;
+        white-space: nowrap;
+      }
+      .MuiFormControlLabel-root {
+        margin: 0;
+        .PrivateSwitchBase-root-1 {
+          padding: 4px;
+        }
+        .MuiCheckbox-root,
+        .MuiRadio-root {
+          padding: 4px;
+          color: #fff;
+        }
+        .MuiCheckbox-root.Mui-checked,
+        .MuiRadio-root.Mui-checked {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+  &_icon {
+    grid-area: branchicon;
+    background-color: #a82f96;
+    padding: 5px;
+    border: none;
+    height: 35px;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+    path {
+      fill: #fff;
+    }
+  }
+  &:lang(en) {
+    right: -150px;
+  }
+  &:lang(ar) {
+    left: -150px;
+  }
+}
+.selectbranchside.show {
+  &:lang(en) {
+    right: 0px;
+  }
+  &:lang(ar) {
+    left: 0px;
+  }
+}

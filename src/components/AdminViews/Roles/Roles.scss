@@ -1,0 +1,250 @@
+.roles {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 80px);
+  max-height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  flex-shrink: 0;
+  position: relative;
+  margin: 0 -15px;
+  //   outer route of the page you can navigate
+  &-route {
+    background-color: white;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    width: 208px;
+    padding: 5px;
+    position: relative;
+    position: fixed;
+    background: #fff;
+    z-index: 100;
+    transition: all 0.3s;
+
+    &:lang(en) {
+      left: 72px;
+      border-right: solid 1px #d5d7da;
+      border-left: none;
+    }
+    &:lang(ar) {
+      right: 72px;
+      border-left: solid 1px #d5d7da;
+      border-right: none;
+    }
+    top: 80px;
+    height: calc(100% - 80px);
+
+    &__collapse {
+      width: 15px !important;
+      .sales-route__container-single,
+      .sales-route__header {
+        display: none;
+      }
+    }
+    &__header {
+      font-weight: 600;
+      font-size: 19px;
+      color: #111827;
+      padding: 20px;
+      transition: all 0.3s;
+    }
+    &__container {
+      &-single {
+        height: 46px;
+        font-weight: 600;
+        font-size: 12px;
+        color: #111827;
+        cursor: pointer;
+        padding: 4px 20px;
+        display: flex;
+        align-items: center;
+        margin: 3px 0px;
+        border-radius: 5px;
+        white-space: nowrap;
+        transition: all 0.3s;
+        &:hover {
+          background-color: #f3f6f9;
+          color: #a12b94;
+        }
+      }
+      .active {
+        background-color: #f3f6f9;
+        &:hover {
+          background-color: #f3f6f9;
+        }
+      }
+    }
+  }
+
+  //   content of the page you see
+  &-views {
+    background: #ffffff;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 1;
+    padding: 25px 45px 0px 45px;
+    position: relative;
+    transition: padding 0.3s;
+    &__header {
+      min-height: 80px;
+      position: sticky;
+      top: 0;
+      margin-bottom: 15px;
+      &-title {
+        font-weight: 700;
+        font-size: 16px;
+        color: #111827;
+        margin-bottom: 10px;
+      }
+      &-desc {
+        display: flex;
+        justify-content: space-between;
+        &__subtitle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          max-width: 70%;
+          font-weight: 400;
+          font-size: 14px;
+          color: #6b7280;
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-btns {
+        display: flex;
+        gap: 5px;
+        min-width: 200px;
+        .action {
+          height: 45px;
+        }
+      }
+    }
+
+    &__data {
+      position: relative;
+      overflow: hidden auto;
+      height: 85%;
+      width: 100%;
+      &:lang(ar) {
+        padding-left: 10px;
+      }
+      &:lang(en) {
+        padding-right: 10px;
+      }
+      ::-webkit-scrollbar {
+        width: 10px; /* Remove scrollbar space */
+      }
+      .beuti-table {
+        .MuiTableCell-head {
+          color: #1a202c !important;
+          font-weight: 600 !important;
+          font-size: 14px !important;
+          white-space: nowrap;
+        }
+        .MuiTableRow-root {
+          .MuiTableCell-root.MuiTableCell-body {
+            color: #718096;
+            font-weight: 600;
+            font-size: 14px;
+          }
+          .emp {
+            max-width: 250px;
+            &__holder {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 5px;
+              &--cell {
+                background: #e8edf2;
+                border: 1px solid #d8d9dc;
+                border-radius: 4px;
+                padding: 3px;
+                color: #575a61;
+                width: fit-content;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //   collapse btn to close the route
+  &-collapse--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+
+    z-index: 2;
+    background: #ffffff;
+    border: 1px solid #cbd5e0;
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s;
+    &:lang(ar) {
+      left: -15px;
+      transform: rotate(180deg);
+    }
+    &:lang(en) {
+      right: -15px;
+      transform: rotate(0deg);
+    }
+    &.disappear {
+      &:lang(ar) {
+        transform: rotate(0deg);
+      }
+      &:lang(en) {
+        transform: rotate(180deg);
+      }
+    }
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+.minmiz-roles {
+  transition: padding 0.3s;
+
+  &.no-push {
+    &:lang(ar) {
+      padding-right: 15px;
+    }
+    &:lang(en) {
+      padding-left: 15px;
+    }
+  }
+  &.push-roles {
+    &:lang(ar) {
+      padding-right: 208px;
+    }
+    &:lang(en) {
+      padding-left: 208px;
+    }
+  }
+}
+.add-custom-item {
+  .booking-headers_first--part_status.w-100 {
+    button {
+      width: 100% !important;
+      height: 100% !important;
+      border-color: #d1d5db !important;
+      &:hover {
+        border-color: #d1d5db !important;
+      }
+    }
+    .booking-headers_first--part_status-drop {
+      width: 94% !important;
+    }
+  }
+}

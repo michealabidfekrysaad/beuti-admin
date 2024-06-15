@@ -1,0 +1,96 @@
+.serviceslider {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  .MuiTabs-scrollButtonsDesktop {
+    display: none;
+  }
+  &-tabs {
+    align-items: center !important;
+    .MuiTabs-flexContainer {
+      gap: 5px;
+    }
+    &__single {
+      background-color: #f7fafc !important;
+      color: rgb(0, 0, 0) !important;
+      width: fit-content !important;
+      min-width: 80px !important;
+      border-radius: 5px !important;
+      font-weight: 500 !important;
+      font-size: 14px !important;
+      min-height: unset !important;
+      height: 45px !important;
+      max-width: unset !important;
+    }
+    .Mui-selected {
+      background: #a12b94 !important;
+      color: white !important;
+    }
+  }
+  &-data {
+    background-color: white;
+    max-height: calc(100vh - 350px);
+    overflow: auto;
+    width: 100%;
+    border: unset;
+    padding: 1px 6px;
+    &__info {
+      &-cat--name {
+        padding: 10px 5px 0px 5px;
+        font-weight: 700;
+        text-align: start;
+        font-size: 20px;
+        cursor: default;
+      }
+      &-service {
+        min-height: 60px;
+        cursor: pointer;
+        &:lang(en) {
+          padding: 20px 20px 20px 30px;
+        }
+        &:lang(ar) {
+          padding: 20px 30px 20px 20px;
+        }
+        border-bottom: 0.8px solid #edf2f7;
+        display: flex;
+        justify-content: space-between;
+        &__first {
+          font-weight: 500;
+          font-size: 16px;
+          text-align: start;
+          &-name {
+            color: #27303f;
+            margin-bottom: 5px;
+          }
+          &-desc {
+            color: #718096;
+          }
+        }
+        &__last {
+          font-weight: 600;
+          font-size: 16px;
+          color: #27303f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &:hover {
+          background-color: #f7fafc;
+        }
+      }
+    }
+  }
+  .MuiTabs-indicator {
+    background-color: unset !important;
+  }
+}
+
+.no-data-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  font-weight: bold;
+  font-size: 20px;
+}

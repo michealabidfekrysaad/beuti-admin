@@ -1,0 +1,67 @@
+.quicksale {
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 210px));
+    justify-content: space-between;
+    gap: 15px;
+    &:lang(en) {
+      direction: ltr;
+    }
+    &:lang(ar) {
+      direction: rtl;
+    }
+
+    &-item {
+      background: #ffffff;
+      box-shadow: 0px 0px 6px rgba(181, 183, 196, 0.25);
+      border-radius: 13px;
+      height: 124px;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      &:lang(en) {
+        direction: ltr;
+      }
+      &:lang(ar) {
+        direction: rtl;
+      }
+      h2 {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      &:hover {
+        color: #a82f96;
+        opacity: 0.8;
+        border: 1px solid #a82f96;
+      }
+    }
+  }
+  &_editbtn {
+    border: none;
+    color: #a12b94;
+    font-weight: 600;
+    font-size: 18px;
+    background: none;
+    margin-top: 30px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+.freeitem-text {
+  padding-bottom: 10px;
+  color: #5e6278;
+  font-size: 13px;
+}
+.add-custom-item {
+  .product-details {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .product-details_name {
+    margin-bottom: 0px;
+  }
+}

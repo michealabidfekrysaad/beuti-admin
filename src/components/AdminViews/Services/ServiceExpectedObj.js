@@ -1,0 +1,41 @@
+export const expectedObj = {
+  id: 0,
+  name: '',
+  arName: '',
+  enName: '',
+  isActive: false,
+  priceValue: 0,
+  currency: '',
+  categoryID: 0,
+  categoryName: '',
+  offer: {
+    id: 0,
+    percentage: 0,
+    name: '',
+    startDate: '',
+    endDate: '',
+  },
+  duration: '',
+  isDeleted: false,
+  centerTypeID: 0,
+  centerTypeName: '',
+  generalCenterTypeID: 0,
+  generalCenterTypeName: '',
+  employeeList: [
+    {
+      id: 0,
+      name: '',
+      type: 0,
+      typeName: '',
+      employeeOffDays: [
+        {
+          id: 0,
+          startTime: '',
+          endTime: '',
+          startDate: '',
+          endDate: '',
+        },
+      ],
+    },
+  ],
+};

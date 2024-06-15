@@ -1,0 +1,211 @@
+// Main Button
+@import './../variables';
+.btn.btn-primary {
+  color: #fff;
+  background-color: $primary !important;
+  border-color: $primary !important;
+  font-size: 15px;
+  border: none;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 6px 24px;
+  min-width: 113px;
+  &:focus,
+  &:hover {
+    background-color: $primary !important;
+    border-color: $primary !important;
+    box-shadow: 0 0 0 0.2rem #a82f967d;
+  }
+}
+// Main Outline Button
+.btn.btn-outline-primary {
+  color: $primary;
+  background-color: #f6f6f6 !important;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25) !important;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 24px;
+  min-width: 113px;
+  border-color: #fff !important;
+  &:focus,
+  &:hover {
+    color: $primary !important;
+    background-color: #f6f6f6 !important;
+    box-shadow: 0 0 0 0.2rem rgba(151, 151, 151, 0.25) !important;
+    font-size: 15px;
+  }
+}
+// btn with background-gery (cancel btn)
+.btn.btn-grey {
+  color: #5e6278;
+  background-color: #e5e7eb !important;
+  border-color: #e5e7eb !important;
+  font-size: 15px;
+  border: none;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 6px 24px;
+  min-width: 113px;
+  &:focus,
+  &:hover {
+    background-color: #e5e7eb !important;
+    border-color: #e5e7eb !important;
+    box-shadow: 0 0 0 0.2rem #cacaca !important;
+  }
+}
+.btn.btn-link {
+  color: #dc3545;
+  border: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+//Checkbox
+.MuiRadio-colorSecondary.Mui-checked {
+  color: $primary !important;
+}
+body[dir='rtl'] {
+  .MuiInputLabel-formControl {
+    right: 0;
+    left: auto;
+  }
+  .MuiInputLabel-formControl.MuiInputLabel-filled {
+    right: 25px;
+    left: auto;
+  }
+  .MuiFormLabel-root,
+  .MuiTypography-body1,
+  .MuiInputBase-input {
+    font-family: 'Cairo', sans-serif !important;
+  }
+  .MuiInputLabel-shrink {
+    transform-origin: top right;
+  }
+  .MuiFormGroup-root {
+    .MuiFormControlLabel-root {
+      margin-right: -11px;
+      margin-left: 16px;
+    }
+  }
+  .MuiFormHelperText-root {
+    text-align: right;
+  }
+  .MuiSelect-select.MuiSelect-select {
+    padding-left: 24px;
+    padding-right: 0px;
+  }
+  .MuiSelect-icon {
+    left: 0;
+    right: auto;
+  }
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 0.1px solidrgba(168, 47, 150, 1) !important;
+}
+
+// Buttons with icons
+
+.icon-wrapper-btn {
+  border: none;
+  padding: 6px 12px;
+  background-color: transparent;
+  transition: all 0.1s;
+  border-radius: 6px;
+  &:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+.btn-icon-danger:hover {
+  background-color: #dc3545e3 !important;
+  .text-danger {
+    color: #f3f6f9 !important;
+  }
+}
+.btn-icon-danger-fill {
+  background-color: #dc3545e3 !important;
+  &:hover {
+    opacity: 0.7;
+  }
+  .text-danger {
+    color: #f3f6f9 !important;
+  }
+}
+.btn-icon-success-fill {
+  background-color: #28a745 !important;
+  &:hover {
+    opacity: 0.7;
+  }
+  .text-success {
+    color: #f3f6f9 !important;
+  }
+}
+.btn-icon-primary:hover {
+  background-color: #007bffe3 !important;
+  .text-primary {
+    color: #f3f6f9 !important;
+  }
+}
+.btn-icon-warning:hover {
+  background-color: #ffc107 !important;
+  .text-warning {
+    color: #f3f6f9 !important;
+  }
+}
+.btn-icon-transparent:hover {
+  background-color: #f6f6f6 !important;
+  .text-primary {
+    color: #000000 !important;
+  }
+}
+.MuiSelect-select:focus {
+  background-color: #fff !important;
+}
+
+.btn-icon-info:hover {
+  background-color: #17a2b8 !important;
+  .text-info {
+    color: #f3f6f9 !important;
+  }
+}
+.sorting-btn {
+  background-color: white;
+  line-height: 1.5rem;
+  border: none;
+  font-weight: 600 !important;
+  color: #b5b5c3 !important;
+  font-size: 15px !important;
+  text-transform: uppercase;
+  padding: 0;
+  i {
+    color: #1686ff;
+    font-weight: bold;
+  }
+  &:hover i {
+    color: #80bdff;
+  }
+}
+.maxPage .MuiSelect-select.MuiSelect-select {
+  padding: 7px 25px !important;
+}
+
+.btn-filter {
+  background: #ffffff;
+  -webkit-box-shadow: inset 0px 0px 1px black;
+  box-shadow: inset 0px 0px 1px 1px #00000029;
+  border-radius: 3px;
+  height: 100%;
+  &__word {
+    color: #c4c4c4;
+  }
+  &__icon {
+    color: $primary;
+  }
+  &:focus,
+  &:hover {
+    background: #ffffff;
+    border-color: #a82f965e !important;
+    box-shadow: inset 0px 0px 1px 1px #00000029;
+  }
+}

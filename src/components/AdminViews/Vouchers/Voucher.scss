@@ -1,0 +1,161 @@
+.voucherdetails {
+  align-items: center;
+  justify-content: space-between;
+  &__title {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #111827;
+    display: flex;
+  }
+  &__status {
+    font-size: 12px;
+    margin: 3px;
+    color: #009f1f;
+    font-weight: bolder;
+  }
+  &__date {
+    font-size: 16px;
+    color: #111827;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: #a12b94;
+    &.expired {
+      color: #5e6278;
+    }
+    &-number {
+      font-size: 72px;
+      font-weight: bold;
+    }
+    &-currency {
+      font-size: 33px;
+    }
+  }
+
+  &__send {
+    background: #a82f96;
+    border: 1px solid #a82f96;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 48px;
+    width: 203px;
+  }
+  &__delete {
+    background: #fff;
+    margin: 0px 16px;
+    border: 1px solid #d1d5db;
+    color: #d11f3d;
+    font-weight: bolder;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 48px;
+    width: 203px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #fff;
+      background: #d11f3d;
+    }
+    &:disabled {
+      opacity: 0.5;
+      background: #fff;
+
+      color: #d1d5db;
+    }
+  }
+}
+
+.customers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(213px, 213px));
+  justify-content: space-between;
+  grid-row-gap: 15px;
+  grid-column-gap: 20px;
+
+  &__item {
+    &.viewmode {
+      pointer-events: none;
+    }
+    position: relative;
+    height: 188px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.active {
+      border-color: #a82f96;
+    }
+    &-valid {
+      background: rgba(168, 47, 150, 0.12);
+      border-radius: 5px;
+      padding: 4px 10px;
+      color: #a82f96;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+    &-used {
+      background: #cbd5e0;
+      border-radius: 5px;
+      padding: 4px 10px;
+      color: #374151;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+  }
+
+  .customerItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__checkbox {
+      position: absolute;
+      top: 10px;
+      .roundcheckBox__wrapper label {
+        border-color: #cbd5e0;
+      }
+      &:lang(en) {
+        right: 12px;
+      }
+      &:lang(ar) {
+        left: 12px;
+      }
+    }
+    .round {
+      width: 66px;
+      height: 66px;
+      .round-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__info {
+      margin-top: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &-name {
+        font-weight: bold;
+        color: #292c38;
+        font-size: 14px;
+        white-space: nowrap;
+        width: 12em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+      }
+      &-number {
+        color: #5e6278;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.collect-phase {
+  .sales-views__header-title {
+    display: inline-block;
+    cursor: pointer;
+  }
+  &_rotate--arrow {
+    transform: rotate(180deg);
+  }
+  .checkout-method {
+    max-width: 100% !important;
+    width: 160px !important;
+    height: 160px !important;
+    margin: auto;
+  }
+}

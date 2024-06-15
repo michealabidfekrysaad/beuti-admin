@@ -1,0 +1,9 @@
+.remaningamount {
+  color: #ffc107;
+  text-decoration: underline;
+}
+.link-customer {
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,128 @@
+.workingdate {
+  &-table {
+    .MuiTableCell-root {
+      border-right: 1px solid #ecf0f3;
+      &:first-of-type {
+        border-right: 1px solid #ecf0f3;
+      }
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+
+  &-tableCell {
+    height: 83px;
+    &__shift {
+      width: 100%;
+      min-height: 47px;
+      background: rgba(236, 240, 243, 1);
+      border: 1px solid #ecf0f3;
+      color: rgba(94, 98, 120, 1);
+      border-radius: 5px;
+      font-size: 13px;
+      transition: all 0.3s;
+      .nextday {
+        color: #a82f96;
+        font-size: 9px;
+      }
+      &:first-of-type {
+        margin-bottom: 3px;
+      }
+      &:hover {
+        background: #a82f96;
+        color: #fff;
+        .nextday {
+          color: #fff;
+        }
+      }
+      p {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__add {
+      height: 100%;
+      width: 100%;
+      background: none;
+      border: none;
+      color: #b5b5c3;
+      border-radius: 5px;
+      display: none;
+      transition: all 0.5s;
+      i {
+        font-size: 13px !important;
+      }
+    }
+    &:hover {
+      .workingdate-tableCell__add {
+        display: block;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+.bootstrap-modal-customizing.modal.employeewhmodal .modal-content {
+  padding: 60px 30px 0px;
+  .title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 16px;
+    text-align: center;
+    color: rgba(94, 98, 120, 1);
+    font-weight: 500;
+  }
+  .date {
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+.bootstrap-modal-customizing.modal {
+  .employeewh--shift-action {
+    button {
+      background-color: #fff;
+      border: none;
+      width: auto;
+      height: auto;
+      padding: 0;
+    }
+    .flaticon-delete-btn {
+      color: rgba(209, 31, 61, 1);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .flaticon-add-circular-button-btn {
+      color: rgba(161, 43, 148, 1);
+    }
+  }
+}
+
+body[dir='rtl'] {
+  .workingdate {
+    &-table {
+      .MuiTableCell-root {
+        border-left: 1px solid #ecf0f3;
+        border-right: none;
+
+        &:first-of-type {
+          border-left: 1px solid #ecf0f3;
+          border-right: none;
+        }
+        &:last-of-type {
+          border-left: none;
+        }
+      }
+    }
+  }
+}
+
+.employeewhmodal-shift {
+  margin-bottom: 20px;
+  &:nth-of-type(2) {
+    margin-bottom: 0px;
+  }
+}

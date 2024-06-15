@@ -1,0 +1,443 @@
+.booking {
+  &-headers {
+    margin: 0px -15px;
+    display: -ms-flexbox;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    top: 80px;
+    height: 90px;
+    z-index: 100;
+    justify-content: space-between;
+    background: #f3f6f9;
+    padding: 0px 41px;
+    [class*='col-'] {
+      padding: 0px !important;
+    }
+    &_middle {
+      .calendar-picker {
+        background-color: white;
+        height: 45px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #111827;
+        display: flex;
+        align-items: center;
+        border: 1px solid #d2d5e1;
+        border-radius: 3px;
+        &__prev,
+        &__next {
+          width: 43px;
+          height: 100%;
+          background-color: white;
+          border-radius: 3px;
+          font-size: 10px;
+          color: #111827;
+          border: none;
+
+          &:hover {
+            background-color: #eeeeee75;
+          }
+        }
+        &__today {
+          height: 100%;
+          background-color: white;
+          border: none;
+          padding: 8px 16px;
+          &:lang(ar) {
+            border-left: 1px solid #eaeaea;
+          }
+          &:lang(en) {
+            border-right: 1px solid #eaeaea;
+          }
+          &:hover,
+          &:disabled {
+            background-color: #eeeeee75;
+          }
+        }
+        .MuiFormControl-root.MuiTextField-root {
+          height: 100%;
+          width: 200px !important;
+
+          .MuiInput-root {
+            height: 100%;
+            .MuiInputBase-input.MuiInput-input {
+              box-sizing: border-box;
+              text-align: center;
+              border-top: 0;
+              border-bottom: 0;
+              border-right: 1px solid #eaeaea;
+              border-left: 1px solid #eaeaea;
+              border-radius: 0;
+              text-align: center !important;
+              font-size: 16px;
+              color: #111827;
+              cursor: pointer;
+              &:focus {
+                outline: none;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_end {
+      max-width: 407px;
+    }
+    &_first--part {
+      [class*='col-'] {
+        padding: 0px !important;
+      }
+      .row {
+        margin: 0px !important ;
+        gap: 15px;
+      }
+
+      //   &_views {
+      //     width: 95px;
+      //   }
+
+      &_status {
+        height: 45px;
+        width: 204px;
+        max-width: 200px;
+        border: 1px solid #d2d5e1;
+        border-radius: 6px;
+        &.w-100 {
+          max-width: 100%;
+        }
+        button.btn.btn-primary {
+          background-color: white !important;
+          border-radius: 6px;
+          box-shadow: unset !important;
+          color: #111827;
+          border-color: #d2d5e1;
+          overflow: auto;
+          width: 100%;
+          text-overflow: ellipsis;
+          padding: 0px 10px !important;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          div {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 90%;
+            white-space: nowrap;
+            text-align: start;
+          }
+          &::-webkit-scrollbar {
+            display: none !important;
+          }
+          &:focus,
+          &:hover {
+            border-color: #d2d5e1;
+            outline: none !important;
+            box-shadow: unset !important;
+            color: #111827;
+          }
+        }
+        &-btn {
+          width: 100%;
+          height: 100%;
+          border-radius: 6px;
+          font-size: 15px;
+          &:after {
+            margin: 0px !important;
+            color: rgba(0, 0, 0, 0.54) !important;
+          }
+        }
+        &-drop {
+          text-align: unset !important;
+          background-color: white;
+          //   box-shadow: -1px 1px 0px 2px #efefef;
+          top: 0px !important;
+          position: absolute !important;
+          padding: 0px;
+          display: flex !important;
+          flex-direction: column;
+          gap: 7px;
+          align-items: start;
+          width: 250px;
+          max-height: 75vh;
+          overflow: hidden auto;
+          .btn.btn-primary {
+            background-color: unset !important;
+            padding: 5px !important;
+            min-width: unset !important;
+            box-shadow: unset !important;
+            font-weight: 500;
+            font-size: 14px;
+            color: #3f4254;
+            &:hover {
+              background-color: rgba(242, 242, 242, 0.792) !important;
+            }
+          }
+          &_holder {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+            padding: 8px;
+            width: 100%;
+            label {
+              margin: 0px !important;
+              font-weight: 500;
+              font-size: 14px;
+              color: #718096;
+              overflow: hidden;
+              span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+                font-size: 15px;
+                font-weight: 500;
+                font-family: unset;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 84%;
+                white-space: nowrap;
+                text-align: start;
+              }
+              span.PrivateSwitchBase-root-5 {
+                padding: 4px 13px;
+              }
+            }
+          }
+          &_holder:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    &_second--part {
+      //   display: flex;
+      justify-content: flex-end;
+      .row {
+        margin: 0px !important ;
+        gap: 15px;
+      }
+      [class*='col-'] {
+        padding: 0px !important;
+      }
+      &_toggle--btn {
+        background-color: transparent;
+        font-weight: 500;
+        font-size: 18px;
+        color: #374151;
+        height: 45px;
+        width: 50px;
+        background-color: #fff;
+        border: 1px solid #d2d5e1;
+        border-radius: 5px;
+        padding: 0;
+        &_text {
+          text-align: center;
+          margin: 0px;
+          display: inline-block;
+        }
+      }
+      &_add {
+        button {
+          box-shadow: unset !important;
+
+          &:focus,
+          &:hover {
+            outline: none !important;
+            box-shadow: unset !important;
+          }
+        }
+        &-btn {
+          width: 111px;
+          height: 42px;
+          background: #a12b94;
+          border-radius: 6px;
+          font-weight: 600;
+          font-size: 15px;
+          color: #ffffff;
+          &:after {
+            content: unset;
+          }
+        }
+        &-drop {
+          text-align: unset !important;
+          background-color: white;
+          box-shadow: -1px 1px 0px 2px #efefef;
+          top: 0px !important;
+          position: absolute !important;
+          padding: 10px 16px;
+          display: flex !important;
+          flex-direction: column;
+          gap: 7px;
+          align-items: start;
+          .btn.btn-primary {
+            background-color: unset !important;
+            padding: 5px !important;
+            min-width: unset !important;
+            box-shadow: unset !important;
+            font-weight: 500;
+            font-size: 14px;
+            color: #3f4254;
+          }
+        }
+      }
+    }
+  }
+  &-headers--pos {
+    top: -1px !important;
+  }
+  &-headers--sp {
+    top: -1px !important;
+    padding: 2px 20px;
+    .booking-headers_first--part_status {
+      width: 140px;
+    }
+    .booking-headers_middle .calendar-picker .MuiFormControl-root.MuiTextField-root {
+      width: 28vw !important;
+      max-width: 200px !important;
+    }
+  }
+}
+.disable-click-all-emp {
+  span.MuiTypography-root {
+    color: black !important;
+    opacity: 0.2;
+  }
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f54f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  margin: 8px;
+  border: 7px solid rgb(173, 173, 173);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(173, 173, 173) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.booking-headers {
+  .booking-headers_second--part_add {
+    .btn.btn-primary {
+      height: 43px;
+      border-radius: 5px;
+      width: 120px;
+    }
+  }
+  .beutiselect {
+    .booking-headers_first--part_views {
+      width: 120px;
+      margin: 0 10px;
+    }
+  }
+}
+// hide purple part in small screen for datePicker
+.MuiPickersDatePickerRoot-toolbarLandscape {
+  display: none !important;
+}
+
+.filters {
+  background-color: white !important;
+  border-radius: 6px;
+  height: 45px;
+  width: 95px;
+  border-color: unset;
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #d2d5e1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filter-dialog {
+  .packageServieHeader {
+    padding: 35px 0px 0px;
+    justify-content: center;
+    border-bottom: none;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+  .modal-dialog {
+    // height: 150%;
+    width: 96%;
+    .modal-content {
+      min-height: 80%;
+    }
+  }
+  .header {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1a202c;
+  }
+  .booking-headers_first--part_status {
+    width: 100% !important;
+  }
+  .booking-headers_first--part_status button.btn.btn-primary {
+    height: 42px !important;
+    width: 100% !important;
+  }
+  .booking-headers_first--part_status-drop {
+    max-height: 50vh !important;
+    width: 80%;
+    left: 0px !important;
+    right: 0px !important;
+  }
+}
+.floated-controls {
+  position: fixed;
+  top: 50%;
+  z-index: 100;
+  flex-direction: column;
+  display: flex;
+  gap: 5px;
+  &:lang(ar) {
+    left: 20px;
+  }
+  &:lang(en) {
+    right: 20px;
+  }
+  &__add {
+    width: 50px;
+    height: 50px;
+    background: #a12b94;
+    border-radius: 50%;
+    border: unset;
+    color: white;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog-centered {
+    min-height: unset !important;
+  }
+}

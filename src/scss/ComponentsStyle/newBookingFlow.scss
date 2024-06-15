@@ -1,0 +1,107 @@
+.picker-add-new-booking {
+  input {
+    cursor: pointer !important;
+    font-weight: bold;
+    font-size: 18px;
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  //   &::after {
+  //     content: '\02c5';
+  //     position: absolute;
+  //     right: 60px;
+  //     top: 3px;
+  //     font-size: 20px;
+  //     color: $primary;
+  //   }
+}
+
+.add-booking-details-sec {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  padding: 30px;
+  margin: 15px 0px;
+  position: relative;
+  .delete {
+    position: absolute;
+    top: 10px;
+
+    border: none;
+    background: transparent;
+    &:lang(en) {
+      right: 15px;
+    }
+    &:lang(ar) {
+      left: 15px;
+    }
+  }
+}
+
+.MuiStepper-root {
+  align-items: center;
+  justify-content: center;
+}
+.MuiStepConnector-vertical {
+  margin-left: 0px !important;
+  max-height: 220px !important;
+  overflow: hidden;
+  .MuiStepConnector-lineVertical {
+    min-height: 220px;
+    border-left-style: dashed !important;
+  }
+  .MuiStepConnector-line {
+    border-color: #e2e8f0;
+  }
+}
+.MuiStep-root.MuiStep-vertical {
+  &:last-of-type {
+    svg {
+      color: #fff !important;
+      border: 2px solid #e2e8f0;
+      border-radius: 50%;
+    }
+  }
+}
+.MuiStepLabel-label {
+  visibility: hidden;
+}
+.MuiStepLabel-labelContainer {
+  display: none;
+}
+.MuiStepLabel-iconContainer {
+  padding-right: 0px !important;
+}
+
+.MuiSvgIcon-root.MuiStepIcon-root {
+  color: #a82f96 !important;
+
+  width: 30px;
+  height: 30px;
+  .MuiStepIcon-text {
+    fill: #ffffff !important;
+    font-size: 0.95rem !important;
+    font-weight: bold;
+  }
+}
+
+.add-booking-details-sec.unselect {
+  background-color: #f7fafc !important;
+  border: 1px solid #f7fafc !important;
+}
+
+.selectlocation {
+  .MuiSelect-select.MuiSelect-select {
+    display: flex;
+    align-items: center;
+  }
+  &-item {
+    span {
+      padding: 0px 7px;
+    }
+  }
+  span {
+    padding: 0px 7px;
+  }
+}

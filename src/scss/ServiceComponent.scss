@@ -1,0 +1,156 @@
+.service {
+  margin-bottom: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  &_date {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    padding: 30px 0px;
+  }
+  &_body {
+    background: #ffffff;
+    box-shadow: 0px 4px 40px rgba(181, 183, 196, 0.25);
+    border-radius: 8px;
+    padding: 20px 18px;
+    border: none;
+    width: 100%;
+    &-sections {
+      &_time {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &-format {
+          font-weight: 700;
+          font-size: 16px;
+          color: #1a202c;
+        }
+        &-next {
+          font-weight: 500;
+          font-size: 11px;
+          color: #a82f96;
+        }
+      }
+      &_data {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        &-status {
+          font-weight: 600;
+          font-size: 8px;
+          line-height: 12px;
+          min-width: 53px;
+          width: fit-content;
+          padding: 5px 10px;
+          height: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3px;
+        }
+        &-name {
+          font-weight: 500;
+          font-size: 14px;
+          color: #1a202c;
+          padding: 5px 0px;
+        }
+        &-emp {
+          font-weight: 400;
+          font-size: 14px;
+          color: #718096;
+        }
+      }
+      &_customer {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        gap: 10px;
+        &-name {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-weight: 500;
+          font-size: 14px;
+          color: #1a202c;
+          svg {
+            width: 25px;
+          }
+        }
+        &-place {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-weight: 500;
+          font-size: 11px;
+          color: #718096;
+          svg {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.border-grey_left {
+  border-left: 1px solid #e2e5ed;
+}
+.border-grey_right {
+  border-right: 1px solid #e2e5ed;
+}
+
+.borderColor_left__confirmed {
+  border-left: 3px solid #4dc41f;
+}
+.borderColor_right__confirmed {
+  border-right: 3px solid #4dc41f;
+}
+
+.borderColor_left__cancelled {
+  border-left: 3px solid #464e5f;
+}
+.borderColor_right__cancelled {
+  border-right: 3px solid #464e5f;
+}
+
+.borderColor_left__closed {
+  border-left: 3px solid #a12b94;
+}
+.borderColor_right__closed {
+  border-right: 3px solid #a12b94;
+}
+
+.borderColor_left__pending {
+  border-left: 3px solid #ffa800;
+}
+.borderColor_right__pending {
+  border-right: 3px solid #ffa800;
+}
+
+.borderColor_left__payCancelled {
+  border-left: 3px solid #464e5f;
+}
+.borderColor_right__payCancelled {
+  border-right: 3px solid #464e5f;
+}
+
+.borderColor_left__NoShow {
+  border-left: 3px solid #d11f3d;
+}
+.borderColor_right__NoShow {
+  border-right: 3px solid #d11f3d;
+}
+
+.borderColor_left__reservedCustomer {
+  border-left: 3px solid #bbd3f5;
+}
+.borderColor_right__reservedCustomer {
+  border-right: 3px solid #bbd3f5;
+}
+
+.not-found {
+  margin-top: 80px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}

@@ -1,0 +1,39 @@
+.saleproduct {
+  &-table {
+    max-height: 50vh;
+    overflow-y: auto;
+    .saleproduct-table__name {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #4a5568;
+      font-size: 14px;
+    }
+    background: #fff;
+    box-shadow: 0px 0px 10px hsla(232, 11%, 74%, 0.25);
+    border-radius: 13px;
+    .MuiTableRow-head {
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      .MuiTableCell-head {
+        color: #1a202c !important;
+        font-size: 14px !important;
+        padding: 25px !important;
+      }
+    }
+
+    .producttable-image {
+      width: 57.72px;
+      height: 50.15px;
+    }
+    &-select {
+      transition: all 0.3s;
+      &:hover {
+        background-color: #fafcfe;
+        cursor: pointer;
+      }
+    }
+  }
+}

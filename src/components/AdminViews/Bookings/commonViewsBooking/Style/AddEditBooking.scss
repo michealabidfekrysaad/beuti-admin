@@ -1,0 +1,331 @@
+.booking {
+  &-sidebar {
+    &__clients {
+      height: 100%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      &-search {
+        padding: 24px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      &-result {
+        height: 100%;
+        overflow-y: auto;
+        transition: all 0.5s;
+        &--empty {
+          height: 100%;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          font-size: 17px;
+          color: #000;
+          font-weight: 500;
+          text-align: center;
+          width: 75%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+.booking-sidebar__clients-search {
+  .beuti-search__input {
+    border-radius: 4px;
+    height: 48px;
+    box-shadow: none;
+    background: #ffff;
+    border: 1px solid #d2d5e1;
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 38px;
+    padding-left: 38px;
+    width: 100%;
+    color: #a12b94;
+    &:focus {
+      border-color: #a12b94;
+      background-color: #fff;
+    }
+    &::placeholder {
+      color: #a0aec0;
+    }
+  }
+  .beuti-search__submit,
+  .beuti-search__clear {
+    width: 48px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .beuti-search__submit {
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .beuti-search__clear {
+    svg {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+.booking-sidebar {
+  .client-loading {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    .MuiCircularProgress-colorSecondary {
+      color: #a12b94 !important;
+    }
+  }
+  &__clients-result--allClients {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .emp--holder {
+    &.nocursor {
+      cursor: unset;
+    }
+    padding: 10px 20px;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 97px;
+    .clientitem {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      transition: all 0.3s;
+      .round {
+        &-img {
+          width: 100%;
+          height: 100%;
+        }
+        width: 64px;
+        height: 64px;
+      }
+      &__emp-data {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: flex-start;
+        &_title {
+          font-weight: 500;
+          font-size: 17px;
+          color: #1a202c;
+        }
+        &_sub--title {
+          font-weight: 400;
+          font-size: 15px;
+          color: #4a5568;
+          min-height: 25%;
+        }
+      }
+    }
+    &-close {
+      margin: 0 50px;
+      border: none;
+      background-color: #fff;
+      svg {
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+}
+.addclient {
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+  &-button {
+    color: #a12b94;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    border: none;
+    span {
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0px 10px;
+    }
+  }
+}
+body[dir='rtl'] {
+  .booking-sidebar__clients-search {
+    .beuti-search__input {
+      padding-right: 65px;
+      padding-left: 65px;
+    }
+  }
+}
+
+.map {
+  &-wrapper {
+    width: 100%;
+    height: 385px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    &__input-wrapper {
+      display: flex;
+      top: 60px;
+      position: absolute;
+      z-index: 2;
+      width: 94%;
+      left: 3%;
+      right: 3%;
+      &--autocompelete {
+        width: 100%;
+        height: 55px;
+        border-radius: 6px;
+        border: none;
+        box-shadow: 0px 8px 24px 0px #4a556814;
+        padding: 0px 16px;
+        &:focus {
+          outline: none;
+        }
+      }
+      &--icon-map {
+        position: absolute;
+        top: calc((55px - 24px) / 2);
+        &:lang(ar) {
+          left: 30px;
+        }
+        &:lang(en) {
+          right: 30px;
+        }
+        // @include position(30px);
+      }
+    }
+  }
+  &-pin {
+    position: relative;
+    top: -49px;
+    right: 20px;
+    &:lang(ar) {
+      right: -20px;
+    }
+  }
+  &-not--supported {
+    background: #f7fafc;
+    border-radius: 13px;
+    padding: 8px 20px;
+    margin: 5px 0px 20px 0px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1a202c;
+  }
+}
+.MuiListItem-root.Mui-disabled.bookingdropdown-group__title {
+  font-weight: 700;
+  line-height: 20px;
+  color: #1a202c;
+  padding: 8px 16px;
+  display: block;
+  font-size: 15px;
+  background-color: #80808014;
+  opacity: 1;
+}
+.bookingdropdown-group {
+  &__item.MuiListItem-root {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .bookingdropdown-group__item-info {
+      text-align: start;
+      &--title {
+        color: #27303f;
+        font-weight: 600;
+        font-size: 12px;
+      }
+      &--time {
+        color: #718096;
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+    .bookingdropdown-group__item-price {
+      color: #27303f;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  }
+}
+
+.addbooking {
+  &-location {
+    display: flex;
+    border: 1px solid #e2e8f0;
+    border-radius: 11px;
+    padding: 15px 30px;
+    margin: 15px 0px;
+    align-items: center;
+    justify-content: space-between;
+    &-add {
+      width: 200px;
+      height: 48px;
+      color: #fff;
+      font-weight: bold;
+      background: #a12b94;
+      border-radius: 6px;
+      border: none;
+    }
+  }
+}
+
+.packagebox {
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  padding: 30px 20px;
+  margin-top: 15px;
+  &-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &-remove {
+    background-color: unset;
+    border: none;
+    color: #d11f3d;
+    text-decoration: underline;
+    font-size: 500;
+  }
+}
+// for search result box inside map
+.pac-container {
+  z-index: 9999;
+}
+.maploader {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: #b3b3b396;
+  z-index: 100;
+  .MuiCircularProgress-colorSecondary {
+    color: #a12b94 !important;
+  }
+}

@@ -1,0 +1,85 @@
+@import './variables';
+body[dir='ltr'] {
+  [type='radio']:checked,
+  [type='radio']:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+  [type='radio']:checked + label,
+  [type='radio']:not(:checked) + label {
+    padding-left: 28px;
+  }
+
+  [type='radio']:checked + label:before,
+  [type='radio']:not(:checked) + label:before {
+    content: '';
+    left: 0;
+  }
+  [type='radio']:checked + label:after,
+  [type='radio']:not(:checked) + label:after {
+    left: 2.8px;
+  }
+}
+body[dir='rtl'] {
+  [type='radio']:checked,
+  [type='radio']:not(:checked) {
+    position: absolute;
+    right: -9999px;
+  }
+  [type='radio']:checked + label,
+  [type='radio']:not(:checked) + label {
+    padding-right: 28px;
+  }
+  [type='radio']:checked + label:before,
+  [type='radio']:not(:checked) + label:before {
+    content: '';
+    right: 0;
+  }
+  [type='radio']:checked + label:after,
+  [type='radio']:not(:checked) + label:after {
+    right: 2.8px;
+  }
+}
+// common classes for both directions
+[type='radio']:checked + label,
+[type='radio']:not(:checked) + label {
+  position: relative;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #383838;
+  font-family: 'Cairo', sans-serif;
+}
+[type='radio']:checked + label:before,
+[type='radio']:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+[type='radio']:checked ~ label {
+  font-weight: bold;
+  color: $primary !important;
+}
+[type='radio']:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type='radio']:checked + label:after,
+[type='radio']:not(:checked) + label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: $primary;
+  position: absolute;
+  top: 2.8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}

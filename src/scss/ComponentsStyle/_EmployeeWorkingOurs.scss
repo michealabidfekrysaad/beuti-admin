@@ -1,0 +1,113 @@
+.employee-list-nav.MuiBottomNavigation-root {
+  height: 40px;
+  .MuiButtonBase-root.MuiBottomNavigationAction-root {
+    background-color: #dddddd;
+    color: #444444;
+  }
+  .MuiButtonBase-root.MuiBottomNavigationAction-root {
+    border: 1px solid white;
+    font-weight: bold;
+  }
+  .MuiBottomNavigationAction-root.Mui-selected {
+    color: #84256d;
+    background-color: #f6f6f6;
+    border-top: 2px solid #84256d;
+    font-weight: bold;
+  }
+  .MuiBottomNavigationAction-root {
+    min-width: 165px;
+  }
+}
+.dropdown-width {
+  min-width: 140px !important;
+}
+.content-center {
+  justify-content: center;
+  .title {
+    text-align: center;
+  }
+}
+.error-border {
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+#employee-work-hour {
+  .beuti-table .MuiTableCell-head {
+    background-color: #fff;
+  }
+  .MuiTableRow-root:last-of-type {
+    border-bottom: 1px solid #eceff4 !important;
+  }
+  .circular-spinner {
+    color: #2196f3;
+    margin: auto 7px;
+  }
+  .width-cell {
+    width: 60px;
+    border-left: 1px solid #eceff4;
+  }
+  .table-cell {
+    padding: 0px;
+    height: inherit;
+    width: 80px;
+    border-left: 1px solid #eceff4;
+
+    .inside-cell {
+      border: none;
+      background-color: #eaeaea;
+      color: #24334a;
+      height: 48px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 3px;
+      color: #24334a;
+      font-size: 13px;
+      width: 90%;
+    }
+    .normal-cell {
+      border: none;
+      width: 100%;
+      min-width: 80px;
+      background-color: #ffffff;
+      padding: 6px;
+      height: 98%;
+      cursor: pointer;
+      border-radius: 3px;
+      color: #24334a;
+      font-size: 13px;
+      max-width: 98%;
+      &:focus {
+        outline: none;
+      }
+      .hover-show {
+        display: none;
+      }
+      &:hover {
+        .hover-show {
+          display: block;
+        }
+      }
+    }
+    .off-day {
+      background-color: #dfdfdfd5;
+      height: 48px;
+      font-weight: 500;
+      // cursor: pointer;
+      border-radius: 3px;
+      color: #24334a;
+      font-size: 13px;
+      width: 90%;
+      background: #e8e8e8;
+      margin: 0 auto;
+    }
+  }
+  // .Toastify__toast--default,
+  // .Toastify__toast--error {
+  //   font-size: 1.3rem;
+  //   font-weight: bold;
+  //   min-width: 400px !important;
+  //   top: 27px;
+  //   border-radius: 4px;
+  // }
+}

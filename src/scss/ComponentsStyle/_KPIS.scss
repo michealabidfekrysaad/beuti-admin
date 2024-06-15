@@ -1,0 +1,73 @@
+@import './../variables';
+.kpis {
+  &-body {
+    &-item {
+      justify-content: space-between;
+      border-left: 4px solid;
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+      border-radius: 1px;
+    }
+  }
+}
+body[dir='rtl'] {
+  .kpis-body-item {
+    border-left: none !important;
+    border-right: 4px solid;
+  }
+}
+.border-lr-primary {
+  border-left-color: #3699ff !important;
+  border-right-color: #3699ff !important;
+}
+
+.border-lr-sucess {
+  border-left-color: #1bc5bd !important;
+  border-right-color: #1bc5bd !important;
+}
+
+.border-lr-warning {
+  border-left-color: #ffa800 !important;
+  border-right-color: #ffa800 !important;
+}
+
+.border-lr-info {
+  border-left-color: #8950fc !important;
+  border-right-color: #8950fc !important;
+}
+
+.border-lr-secondary {
+  border-left-color: #6c757d !important ;
+  border-right-color: #6c757d !important    ;
+}
+
+.border-lr-main {
+  border-left-color: #84256dc9 !important;
+  border-right-color: #84256dc9 !important;
+}
+.border-lr-white {
+  border-left-color: #ffff !important;
+  border-right-color: #fff !important;
+}
+.statistic {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  &-value {
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: $primary;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &-name {
+    font-weight: 600;
+    color: #5c5b5b !important;
+    font-size: 11px;
+  }
+}

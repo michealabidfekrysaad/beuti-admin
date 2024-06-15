@@ -1,0 +1,327 @@
+@import '../../scss/variables';
+.beutiselect {
+  position: relative;
+
+  &-label {
+    color: #787878;
+    font-weight: 500;
+  }
+  &-dropdown {
+    display: block;
+    // font-family: 'Cairo' !important;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #d1d5db;
+    padding: 10px 0px;
+    height: 45px;
+    background-color: white;
+    box-sizing: border-box;
+    // margin-bottom: 0.25rem;
+    line-height: 20px !important;
+  }
+  .MuiInputBase-input.MuiInput-input {
+    border: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+// give select the same disable color for input
+.MuiInputBase-root.Mui-disabled {
+  cursor: default;
+  background-color: rgba(239, 239, 239, 0.3) !important;
+  border-color: rgba(118, 118, 118, 0.3);
+}
+.beuti-input,
+.beuti-textarea {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__label {
+    color: rgba(120, 120, 120, 1);
+    font-weight: 500;
+    &-error {
+      color: $error !important;
+      font-weight: 500;
+    }
+  }
+  &__field {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #d1d5db;
+    height: 45px;
+    padding: 0 13px;
+    border-radius: 6px;
+    // margin-bottom: 0.25rem;
+    &:focus {
+      outline: none;
+      color: $primary;
+      box-shadow: 0px 1px 2px $primary;
+
+      border-color: $primary;
+    }
+    &-error {
+      border-color: $error !important;
+      color: $error !important;
+      box-shadow: 0px 1px 2px $error !important;
+    }
+  }
+  &__info {
+    position: absolute;
+    top: 53%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__err {
+    color: #e76363 !important;
+  }
+  &__infoLeft {
+    left: 0px;
+  }
+  &__infoRight {
+    right: 0px;
+  }
+  &__infoDisabled {
+    color: #374151;
+  }
+  &__errormsg {
+    color: $error;
+    // position: absolute;
+    height: 0px;
+    font-size: 12px;
+    bottom: -15px;
+  }
+  &__note {
+    color: #6b7280;
+    position: absolute;
+    font-size: 12px;
+    bottom: -15px;
+  }
+}
+.beuti-textarea__field {
+  height: auto;
+  padding: unset;
+  resize: none;
+  padding: 15px;
+  height: 100px;
+}
+.beuti-otp {
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    input {
+      width: 100% !important;
+      height: 100%;
+      font-size: 30px;
+      font-weight: 700;
+      border: 1px solid rgba(151, 151, 151, 0.28);
+      border-radius: 6px;
+      &:focus {
+        box-shadow: 0px 0.892501px 15.8943px rgba(0, 0, 0, 0.1);
+        outline: none;
+      }
+    }
+  }
+  &__timer {
+    display: flex;
+    align-items: center;
+    color: $primary;
+    text-decoration: underline;
+    &-button {
+      background-color: #fff !important;
+      border: none;
+      padding: 0px;
+      color: $primary;
+      &:disabled {
+        color: $gray_label !important;
+      }
+    }
+  }
+}
+
+.beuti-otp .beuti-otp__item input {
+  text-align: center !important;
+}
+
+.beutibutton {
+  color: #fff;
+  background-color: #a82f96 !important;
+  border-color: #a82f96 !important;
+  font-size: 14px;
+  border: none;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 6px 24px;
+  min-width: 113px;
+
+  &:hover {
+    opacity: 0.9;
+    background-color: #a12b94 !important;
+    border-color: #a12b94 !important;
+    -webkit-box-shadow: 0 0 0 0.2rem #a82f967d;
+    box-shadow: 0 0 0 0.2rem #a82f967d;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.65 !important;
+    box-shadow: none !important;
+  }
+}
+.beuti-dropdown-modal {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d1d5db;
+  height: 45px;
+  padding: 0 13px;
+  border-radius: 5px;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+.error-border {
+  border-color: #e76363 !important;
+  color: #e76363 !important;
+  -webkit-box-shadow: 0px 1px 2px #e76363 !important;
+  box-shadow: 0px 1px 2px #e76363 !important;
+}
+
+.ml-input {
+  padding: 0px 13px 0px 60px !important;
+}
+.mr-input {
+  padding: 0px 60px 0px 13px !important;
+}
+.mt-input {
+  margin-top: 31px;
+}
+.width-100px {
+  width: 100px;
+}
+.beuti-autocomeplete {
+  button.MuiAutocomplete-popupIndicator,
+  button.MuiAutocomplete-clearIndicator {
+    width: auto !important;
+    height: auto !important;
+  }
+}
+.beutibuttonempty {
+  color: rgba(63, 66, 84, 1);
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  border-radius: 8px;
+  padding: 6px 24px;
+  min-width: 113px;
+
+  &:hover {
+    opacity: 0.9;
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    -webkit-box-shadow: 0 0 0 0.2rem #d1d5db7d;
+    box-shadow: 0 0 0 0.2rem #d1d5db7d;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.65 !important;
+    box-shadow: none !important;
+  }
+}
+.beuti-input__field .MuiInputBase-root {
+  height: 45px;
+  .MuiInputBase-input.MuiInput-input {
+    height: 45px;
+    border: 1px solid #d1d5db;
+    padding: 0 15px !important;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+      color: #a82f96;
+      -webkit-box-shadow: 0px 1px 2px #a82f96;
+      box-shadow: 0px 1px 2px #a82f96;
+      border-color: #a82f96;
+      border: 1px solid #a82f96;
+    }
+  }
+}
+.beuti-input__field .MuiInput-underline.Mui-error .MuiInputBase-input.MuiInput-input {
+  border-color: #e76363;
+  border: 1px solid #e76363;
+}
+label {
+  cursor: pointer;
+}
+.beuti-date-range-input {
+  .beuti-range-picker {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+
+    border: 1px solid #d1d5db;
+    height: 45px;
+    padding: 0 13px;
+    border-radius: 5px;
+    // margin-bottom: 0.25rem;
+    width: 100%;
+    &:focus {
+      outline: none;
+      color: $primary;
+      box-shadow: 0px 1px 2px $primary;
+
+      border-color: $primary;
+    }
+  }
+}
+.beuti-weekly-picker {
+  button {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    width: 50px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+  }
+  .MuiInputBase-input.MuiInput-input {
+    padding: 3px 50px !important;
+    border: 1px solid #d1d5db;
+    height: 45px;
+    box-shadow: 0px 1px 2px #0000000d;
+    border-radius: 6px;
+    text-align: center !important;
+    box-sizing: border-box;
+    min-width: 426px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.date-end.beuti-input {
+  .beuti-input__field .MuiInputBase-root .MuiInputBase-input.MuiInput-input:focus,
+  .beuti-input__field .MuiInputBase-root .MuiInputBase-input.MuiInput-input {
+    border: none;
+    box-shadow: none;
+  }
+  .beuti-input__field {
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+  }
+  .beuti-input__field:focus {
+    color: #a82f96;
+    -webkit-box-shadow: 0px 1px 2px #a82f96;
+    box-shadow: 0px 1px 2px #a82f96;
+    border-color: #a82f96;
+    border: 1px solid #a82f96;
+  }
+  .MuiIconButton-root {
+    width: auto !important;
+  }
+}

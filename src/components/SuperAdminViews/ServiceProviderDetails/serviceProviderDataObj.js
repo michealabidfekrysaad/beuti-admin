@@ -1,0 +1,18 @@
+export const expectedObj = {
+  id: 0,
+  name: '',
+  mobile: '',
+  status: '',
+  activeServiceNO: 0,
+  workDaysList: [],
+  address: '',
+  city: '',
+  employeTypes: [],
+  generalCenterTypeList: [],
+  isBusy: true,
+  userRateNo: 3,
+  totalServices: 0,
+  totalProfit: 0,
+  totalCommission: 0,
+  totalClients: 0,
+};

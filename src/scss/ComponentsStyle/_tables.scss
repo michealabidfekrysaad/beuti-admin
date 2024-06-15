@@ -1,0 +1,177 @@
+.MuiTable-root th,
+.MuiTable-root td {
+  font-size: 15px;
+  font-family: inherit;
+}
+.MuiTable-root td,
+.MuiTable-root th {
+  // border-right: 1px solid rgba(224, 224, 224, 1);
+  // border-left: 1px solid rgba(224, 224, 224, 1);
+}
+.MuiTable-root th {
+  font-weight: bold;
+}
+.MuiTable-root td:last-of-type,
+.MuiTable-root td:first-of-type,
+.MuiTable-root th:last-of-type,
+.MuiTable-root th:first-of-type {
+  border-right: none;
+  border-left: none;
+}
+.MuiPaper-elevation1.table-boxshadow {
+  box-shadow: 0px 0px 4px 2px #f7f5f5;
+}
+.MuiTableCell-root,
+.MuiTableHead-root {
+  border-bottom: 2px solid #ebedf3 !important;
+}
+.MuiTableCell-head {
+  font-weight: 600 !important;
+  color: $primary !important;
+  font-size: 15px !important;
+  text-transform: capitalize;
+}
+.MuiTableRow-root:last-of-type {
+  border-bottom: none !important;
+  .MuiTableCell-root {
+    border-bottom: none !important;
+  }
+}
+
+//handle Direction
+body[dir='rtl'] {
+  .MuiTableCell-root {
+    text-align: right;
+  }
+  .MuiTableCell-alignCenter {
+    text-align: center;
+  }
+  .MuiTableCell-alignRight {
+    text-align: left;
+  }
+  .MuiTableCell-alignLeft {
+    text-align: right;
+  }
+  // Paagination
+  .MuiPaginationItem-root .MuiPaginationItem-icon {
+    transform: rotate(180deg);
+  }
+}
+
+.MuiPaginationItem-root {
+  color: #84256d !important;
+  border: none !important;
+  background-color: #f3f6f9 !important;
+  height: 32px !important;
+  width: 32px !important;
+}
+.MuiPaginationItem-outlinedSecondary.Mui-selected {
+  border: 1px solid rgba(132, 37, 109, 0.5) !important;
+  background-color: #84256d !important;
+  color: #fff !important;
+}
+.MuiPaginationItem-ellipsis {
+  background-color: #fff !important;
+  border: none !important;
+}
+
+.dynamic-table:first-of-type {
+  text-align: left;
+}
+.dynamic-table:last-of-type {
+  text-align: right;
+}
+body[dir='rtl'] {
+  .dynamic-table:first-of-type {
+    text-align: right;
+  }
+  .dynamic-table:last-of-type {
+    text-align: left;
+  }
+}
+
+.table-coloured {
+  &:nth-of-type(odd) {
+    background-color: #e9e9e963;
+  }
+  &__id {
+    color: #17a2b8 !important;
+    font-weight: bold !important;
+  }
+  &__before {
+    color: #ffc107 !important;
+    font-weight: bold !important;
+  }
+  &__after {
+    color: #28a745 !important;
+    font-weight: bold !important;
+  }
+  &__method svg {
+    height: 25px;
+    width: auto;
+  }
+}
+.MuiTableHead-root {
+  .MuiTableCell-sizeSmall {
+    padding: 10px 24px 10px 16px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            New Beuti Table 3/12                            */
+/* -------------------------------------------------------------------------- */
+
+.beuti-table {
+  box-shadow: 0px 2px 4px 0px rgba(28, 41, 90, 0.0368);
+  border: 1px solid rgba(234, 237, 247, 1);
+  border-radius: 10px;
+  overflow-x: auto;
+  position: relative;
+  .MuiTableCell-root {
+    border-bottom: 1px solid rgba(236, 239, 244, 1) !important;
+  }
+  .MuiTableHead-root {
+    border-bottom: none !important;
+  }
+  .MuiTableCell-head {
+    background: #f3f6f9;
+    color: #73778b !important;
+    font-size: 12px !important;
+
+    text-transform: none;
+  }
+  // .MuiTable-root {
+  //   table-layout: fixed;
+  // }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 35px;
+  }
+  i[class^='flaticon'] {
+    font-size: 12px;
+    color: grey;
+  }
+  i[class*='flaticon-edit'] {
+    color: #0a1629;
+  }
+  i[class*='flaticon-delete'] {
+    color: rgba(209, 31, 61, 1);
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__sort {
+    color: #73778b !important;
+    font-size: 12px !important;
+    background: none;
+    border: none;
+    font-weight: bold;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
